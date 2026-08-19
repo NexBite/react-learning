@@ -146,3 +146,19 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/NexBite/react-learning.git
 git push -u origin main
+
+At work:
+
+git pull
+# work
+git add .
+git commit -m "Day 01: React fundamentals"
+git push
+
+===============
+# At home:
+git pull
+continue working
+git add .
+git commit -m "Day 01: Complete React practice"
+git push
