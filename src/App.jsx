@@ -7,9 +7,21 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import RegistrationPage from "./pages/RegistrationPage";
 
+// import button 
+
+import CounterButtons from './components/CounterButtons';
+
+import CounterDisplay from './components/CounterDisplay';
+
+
 export default function App() {
   const [products, setProducts] = useState(productsData);
   const [users, setUsers] = useState([]);
+  const [count, setCount] = useState(0);
+
+
+
+
 
   const handleToggleStock = (id) => {
     setProducts((prev) =>
@@ -41,7 +53,12 @@ export default function App() {
         </Routes>
 
         <Footer />
+        // counter 
       </div>
+      <div style={{ textAlign: 'center', padding: '20px' }}>
+      <CounterDisplay count={count} />
+      <CounterButtons count={count} setCount={setCount} />
+    </div>
     </BrowserRouter>
   );
 }
